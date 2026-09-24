@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3A2C215C-B1EE-4249-80CA-66333B9F8F96}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Vexed\Vexed.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Vexed">
+        <MSBuild Projects="Vexed\Vexed.dproj"/>
+    </Target>
+    <Target Name="Vexed:Clean">
+        <MSBuild Projects="Vexed\Vexed.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Vexed:Make">
+        <MSBuild Projects="Vexed\Vexed.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Vexed"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Vexed:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Vexed:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
