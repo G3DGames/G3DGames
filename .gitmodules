@@ -1,3 +1,4 @@
 [submodule "Vexed"]
 	path = Vexed
 	url = https://github.com/G3DGames/Vexed.git
+	branch = main
