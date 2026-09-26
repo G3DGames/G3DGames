@@ -12,13 +12,13 @@ To create a copy of this repo locally do the following...
 >
 > git submodule init
 >
-> git submodule update --remote
+> git submodule update
 
 Once you've done this you can open G3DGames.groupproj to access all the games here
 
 If you leave this repo lying on your HD for a while and some of the games may have changed you can update everything by updating the submodules again
 
-> git submodule update --remote
+> git submodule update
 
 
 
